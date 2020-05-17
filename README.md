@@ -4,7 +4,6 @@ Nodejs, Express JS ve Mongo DB kullanarak geliştirilen yönetmen, film ve kulla
 
 Aşağıdaki tablo yönetmen,film ve kullanıcı apinin kullanımını göstermektedir.
 <br/>
-
 **MOVIES**
 |         Route       |HTTP İsteği                          |Açıklama                       |
 |----------------|---------------------|-----------------------------|-----------------------|
@@ -36,3 +35,4 @@ Aşağıdaki tablo yönetmen,film ve kullanıcı apinin kullanımını gösterme
 |----------------|---------------------|-----------------------------|-----------------------|
 |/register|`POST`            |Yeni bir kullanıcı oluşturulur            |
 |/login         |`POST`            |Kullanıcı girişi yapmaya olanak verir.      |
+
