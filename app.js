@@ -6,8 +6,15 @@ const logger = require('morgan');
 
 const directorRouter = require('./routes/director');
 const movieRouter = require('./routes/movie');
+const indexRouter = require("./routes/index");
+
+const config = require("./config");
+const verifyToken = require("./middlewares/verifyToken");
 
 const app = express();
+
+// Jwt secret key ayarlama
+app.set("api_secret_key",config.api_secret_key);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +28,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use("/",indexRouter);
+app.use("/api",verifyToken);
 app.use('/api/director', directorRouter);
 app.use('/api/movie', movieRouter);
 
