@@ -112,5 +112,6 @@
 
 <br/>
 Yukarıdaki tabloda gösterilen tüm API'lar birim testinden geçmiştir.
+<br/>
 
 ![API Unit Test](https://github.com/vurucuorhan17/Nodejs-Movie-Api/blob/master/api-test.png)
