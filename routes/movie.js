@@ -101,7 +101,7 @@ router.delete("/:movieId",(req,res,next) => {
     {
       next({message:"Silmeye çalıştığınız film bulunamadı",code:2});
     }
-    res.json(data);
+    res.json({status:1});
   })
   .catch(err => res.json(err));
 });
