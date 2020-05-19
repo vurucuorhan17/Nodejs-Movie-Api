@@ -109,3 +109,7 @@
 </tr>
 </tbody>
 </table>
+
+Yukarıdaki tabloda gösterilen tüm API'lar birim testinden geçmiştir.
+
+![API Unit Test](https://github.com/vurucuorhan17/Nodejs-Movie-Api/blob/master/api-test.png)
