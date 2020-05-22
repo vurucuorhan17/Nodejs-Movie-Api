@@ -7,21 +7,6 @@ chai.use(chaiHttp);
 
 let token,movieId;
 
-describe("USER REGISTER TEST",function() {
-    before((done) => {
-        chai.request(server)
-        .post("/register")
-        .send({
-            username: "testuser",
-            password: "1234"
-        })
-        .end((err, res) => {
-            res.should.have.status(200);
-            done();
-        });
-    });
-});
-
 describe("/api/movie test",() => {
     before((done) => {
         chai.request(server)
