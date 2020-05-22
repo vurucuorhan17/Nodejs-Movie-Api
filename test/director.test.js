@@ -10,16 +10,15 @@ let token,directorId;
 describe("/api/director tests",() => {
 
     before((done) => {
-        // chai.request(server)
-        // .post("/register")
-        // .send({
-        //     username:"testuser",
-        //     password:"1234"
-        // })
-        // .end((err,res) => {
-        //     res.should.have.status(200);
-        //     done();
-        // });
+        chai.request(server)
+        .post("/register")
+        .send({
+            username:"testuser",
+            password:"1234"
+        })
+        .end((err,res) => {
+            res.should.have.status(200);
+        });
 
         chai.request(server)
         .post("/login")
