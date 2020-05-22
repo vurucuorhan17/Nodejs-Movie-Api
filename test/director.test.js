@@ -9,7 +9,7 @@ let token,directorId;
 
 describe("USER REGISTER TEST",async () => {
     it("Kullanıcı kaydolmuş olmalı",(done) => {
-        chai.request(server)
+        await chai.request(server)
         .post("/register")
         .send({
             username: "testuser",
@@ -17,7 +17,7 @@ describe("USER REGISTER TEST",async () => {
         })
         .end((err, res) => {
             res.should.have.status(200);
-            await done();
+            done();
         });
     });
 });
