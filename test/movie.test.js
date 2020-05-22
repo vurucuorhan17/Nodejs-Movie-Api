@@ -7,9 +7,9 @@ chai.use(chaiHttp);
 
 let token,movieId;
 
-describe("USER REGISTER TEST",async () => {
-    it("Kullanıcı kaydolmuş olmalı",(done) => {
-        await chai.request(server)
+describe("USER REGISTER TEST",function() {
+    before((done) => {
+        chai.request(server)
         .post("/register")
         .send({
             username: "testuser",
